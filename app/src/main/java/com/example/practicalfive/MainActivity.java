@@ -1,6 +1,8 @@
 package com.example.practicalfive;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.view.inputmethod.InputMethodManager;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
@@ -43,5 +45,12 @@ public class MainActivity extends Activity {
         }
         municipalityInput.setError(null);
         municipalityInput.setText(name);
+        InputMethodManager keyboard = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        if (keyboard != null) {
+            keyboard.hideSoftInputFromWindow(municipalityInput.getWindowToken(), 0);
+        }
+        Intent intent = new Intent(this, Municipality.class);
+        intent.putExtra(Municipality.EXTRA_MUNICIPALITY, name);
+        startActivity(intent);
     }
 }
