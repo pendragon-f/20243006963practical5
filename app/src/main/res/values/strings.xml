@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Chinese Municipalities</string>
+    <string name="main_title">Municipalities in China</string>
+    <string name="input_label">I want to know about:</string>
+    <string name="input_hint">e.g. Beijing</string>
+    <string name="supported_names">Beijing · Shanghai · Tianjin · Chongqing</string>
+    <string name="input_help">Type a municipality and press Go on the keyboard.</string>
+    <string name="main_image_description">Map of the four municipalities in China</string>
+    <string name="municipality_image_description">Photo of %1$s</string>
+    <string name="error_empty">Please enter a municipality name.</string>
+    <string name="error_unsupported">Please enter Beijing, Shanghai, Tianjin or Chongqing.</string>
+    <string name="error_missing_municipality">No valid municipality was received. Please choose one again.</string>
+    <string name="error_no_browser">No app is available to open this website.</string>
+    <string name="visit_site">Visit site</string>
+    <string name="website_beijing" translatable="false">https://english.beijing.gov.cn/</string>
+    <string name="website_shanghai" translatable="false">https://english.shanghai.gov.cn/</string>
+    <string name="website_tianjin" translatable="false">http://en.tj.gov.cn/</string>
+    <string name="website_chongqing" translatable="false">https://english.cq.gov.cn/</string>
 </resources>

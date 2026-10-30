@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="page_padding">20dp</dimen>
+    <dimen name="main_image_height">220dp</dimen>
+    <dimen name="municipality_image_height">200dp</dimen>
+</resources>
