@@ -2,7 +2,7 @@
     <string name="app_name">Chinese Municipalities</string>
     <string name="main_title">Municipalities in China</string>
     <string name="input_label">I want to know about:</string>
-    <string name="input_hint">e.g. Beijing</string>
+    <string name="municipality_photo">Municipality photo</string>
     <string name="supported_names">Beijing · Shanghai · Tianjin · Chongqing</string>
     <string name="input_help">Type a municipality and press Go on the keyboard.</string>
     <string name="main_image_description">Map of the four municipalities in China</string>
