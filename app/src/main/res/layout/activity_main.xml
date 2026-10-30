@@ -1,5 +1,69 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_gravity="center" android:text="@string/app_name" />
-</FrameLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_default_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/page_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/main_title"
+            android:textColor="@color/color_text_dark"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_image_height"
+            android:contentDescription="@string/main_image_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chinese_municipalities" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/supported_names"
+            android:textColor="@color/color_text_dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:labelFor="@id/municipality_input"
+            android:text="@string/input_label"
+            android:textColor="@color/color_text_dark"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/municipality_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:hint="@string/input_hint"
+            android:imeOptions="actionGo"
+            android:inputType="textCapWords"
+            android:singleLine="true"
+            android:textColor="@color/color_text_dark"
+            android:textColorHint="@color/municipality_tianjin"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/input_help"
+            android:textColor="@color/color_text_dark"
+            android:textSize="14sp" />
+    </LinearLayout>
+</ScrollView>
