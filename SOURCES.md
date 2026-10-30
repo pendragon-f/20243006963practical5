@@ -7,6 +7,6 @@ The summaries in `arrays.xml` are paraphrased from the municipality information 
 - Chongqing: https://english.cq.gov.cn/aboutchongqing/overview/ and https://english.cq.gov.cn/
 - Tianjin: http://en.tj.gov.cn/tianjininfo/profile/ and http://en.tj.gov.cn/
 
-All photographs, the map and the logo came from the supplied Practical 5 resources. The map was supplied as PNG and converted to JPEG to match the filename in the practical. Launcher images were resized from `app_logo.png`.
+All photographs, the map and the logo came from the supplied Practical 5 resources. The map was supplied as PNG and converted to JPEG on a white background to preserve its transparent areas and match the filename in the practical. Launcher images were resized from `app_logo.png`.
 
 The Tianjin HTTPS endpoint returned a certificate-chain error in this environment. The official HTTP endpoint was reachable, so it is used for the public information link. The other three links use HTTPS. No certificate verification was disabled.
