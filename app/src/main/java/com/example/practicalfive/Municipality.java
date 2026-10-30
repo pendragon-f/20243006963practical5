@@ -1,6 +1,9 @@
 package com.example.practicalfive;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.net.Uri;
 import android.content.res.ColorStateList;
 import android.widget.Button;
 import android.os.Bundle;
@@ -11,6 +14,7 @@ import android.widget.Toast;
 public class Municipality extends Activity {
     public static final String EXTRA_MUNICIPALITY = "com.example.practicalfive.MUNICIPALITY";
     private String municipalityName;
+    private int websiteResource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,8 @@ public class Municipality extends Activity {
         setContentView(R.layout.activity_municipality);
         ScreenInsets.apply(this, findViewById(R.id.municipality_root));
         displayMunicipality();
+        Button visitSite = findViewById(R.id.visit_site);
+        visitSite.setOnClickListener(view -> openOfficialWebsite());
     }
 
     private void displayMunicipality() {
@@ -36,21 +42,25 @@ public class Municipality extends Activity {
                 summaryIndex = 0;
                 imageResource = R.drawable.beijing;
                 colourResource = R.color.municipality_beijing;
+                websiteResource = R.string.website_beijing;
                 break;
             case "Shanghai":
                 summaryIndex = 1;
                 imageResource = R.drawable.shanghai;
                 colourResource = R.color.municipality_shanghai;
+                websiteResource = R.string.website_shanghai;
                 break;
             case "Chongqing":
                 summaryIndex = 2;
                 imageResource = R.drawable.chongqing;
                 colourResource = R.color.municipality_chongqing;
+                websiteResource = R.string.website_chongqing;
                 break;
             case "Tianjin":
                 summaryIndex = 3;
                 imageResource = R.drawable.tianjin;
                 colourResource = R.color.municipality_tianjin;
+                websiteResource = R.string.website_tianjin;
                 break;
             default:
                 finish();
@@ -75,5 +85,16 @@ public class Municipality extends Activity {
         information.setText(getResources().getStringArray(R.array.municipalities_array)[summaryIndex]);
         image.setImageResource(imageResource);
         image.setContentDescription(getString(R.string.municipality_image_description, municipalityName));
+    }
+
+
+    private void openOfficialWebsite() {
+        Intent websiteIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse(getString(websiteResource)));
+        try {
+            startActivity(websiteIntent);
+        } catch (ActivityNotFoundException exception) {
+            Toast.makeText(this, R.string.error_no_browser, Toast.LENGTH_LONG).show();
+        }
     }
 }
